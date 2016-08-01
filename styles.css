@@ -18,7 +18,8 @@ h1 {
 }
 
 .logo {
-    margin-right:1em;
+    margin:0 auto 1em auto;
+    max-width:100%;
 }
 
 #countdown {
