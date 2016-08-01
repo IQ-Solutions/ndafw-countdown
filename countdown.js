@@ -30,7 +30,7 @@ function initializeClock(id, endtime) {
 }
 
 
-// Input the deadline to which we are counting down to.
+// Input the deadline to which we are counting down to. Format: yyyy-mm-dd
 var deadline = '2016-12-31';
 
 
