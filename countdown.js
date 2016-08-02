@@ -1,4 +1,4 @@
-/* Simple vanilla javascript countdown timer. */
+/* Simple vanilla javascript countdown timer from Sitepoint. */
 
 
 // Function for calculating the time. Parsing the days from milliseconds.
