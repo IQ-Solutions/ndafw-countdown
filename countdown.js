@@ -1,7 +1,7 @@
 /* Simple vanilla javascript countdown timer. */
 
 
-// Function for calculating the time.
+// Function for calculating the time. Parsing the days from milliseconds.
 function timeRemaining(endtime) {
     var t = Date.parse(endtime) - Date.parse(new Date());
     var days = Math.floor(t / (1000 * 60 * 60 * 24));
@@ -11,11 +11,13 @@ function timeRemaining(endtime) {
     };
 }
 
-function initializeClock(id, endtime) {
+
+// Function for starting the countdown.
+function initializeCountdown(id, endtime) {
     var clock = document.getElementById(id);
     var daysSpan = clock.querySelector('.days');
 
-    function updateClock() {
+    function updateCountdown() {
         var t = timeRemaining(endtime);
 
         daysSpan.innerHTML = t.days;
@@ -25,8 +27,8 @@ function initializeClock(id, endtime) {
         }
     }
 
-    updateClock();
-    var timeinterval = setInterval(updateClock, 1000);
+    updateCountdown();
+    var timeinterval = setInterval(updateCountdown, 1000);
 }
 
 
@@ -35,4 +37,4 @@ var deadline = '2016-12-31';
 
 
 // Initialize the countdown.
-initializeClock('countdown', deadline);
+initializeCountdown('countdown', deadline);
